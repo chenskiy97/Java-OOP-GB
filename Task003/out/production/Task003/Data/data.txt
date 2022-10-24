@@ -1,0 +1,3 @@
+{"name":Vladislav,"surname":Chenskiy,"height":172,"weight":78}
+"Homework is done"
+4
