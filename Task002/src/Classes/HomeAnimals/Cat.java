@@ -1,11 +1,11 @@
 package Classes.HomeAnimals;
 
-import Classes.Actions;
+import Classes.Interface.Actions;
 
 public class Cat extends FeaturesHomeAnimals implements Actions {
-    String presenceOfWool;
+    boolean presenceOfWool;
 
-    public Cat(int height, int weight, String colorEyes, String name, String breed, String vaccinations, String dateOfBirth, String presenceOfWool) {
+    public Cat(int height, double weight, String colorEyes, String name, String breed, boolean vaccinations, String dateOfBirth, boolean presenceOfWool) {
         super(height, weight, colorEyes, name, breed, vaccinations, dateOfBirth);
         this.presenceOfWool = presenceOfWool;
     }
@@ -17,7 +17,7 @@ public class Cat extends FeaturesHomeAnimals implements Actions {
 
     @Override
     public void showInfo() {
-        System.out.printf("Рост: %d\nВес: %d\nЦвет глаз: %s\nКличка: %s\nПорода: %s\nПривит: %s\nДата рождения: %s\nШерсть: %s\n\n"
+        System.out.printf("Рост: %d\nВес: %f\nЦвет глаз: %s\nКличка: %s\nПорода: %s\nПривит: %s\nДата рождения: %s\nШерсть: %s\n\n"
                 , height, weight, colorEyes, name, breed, vaccinations, dateOfBirth, presenceOfWool);
     }
 

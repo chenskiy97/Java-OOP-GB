@@ -1,24 +1,27 @@
 package Classes.HomeAnimals;
 
 public class Dog extends FeaturesHomeAnimals {
-    private String training;
+    private boolean training;
 
-    public Dog(int height, int weight, String colorEyes, String name, String breed, String vaccinations, String dateOfBirth, String training) {
+    public Dog(int height, double weight, String colorEyes, String name, String breed, boolean vaccinations, String dateOfBirth, boolean training) {
         super(height, weight, colorEyes, name, breed, vaccinations, dateOfBirth);
         this.training = training;
     }
 
-    public String getTraining() {
-        return training;
+    public boolean getTraining() {
+        return this.training;
     }
 
-    public void setTraining(String qwe) {
-        training = qwe;
+    public final void toTrain(boolean toTrain) {
+        if (this.training) {
+            System.out.printf(" Dog with name %s already trained!!!", this.name);
+        } else
+            this.training = toTrain;
     }
 
     @Override
     public void showInfo() {
-        System.out.printf("Рост: %d\nВес: %d\nЦвет глаз: %s\nКличка: %s\nПорода: %s\nПривит: %s\nДата рождения: %s\nДресирован: %s\n\n"
+        System.out.printf("Рост: %d\nВес: %f\nЦвет глаз: %s\nКличка: %s\nПорода: %s\nПривит: %s\nДата рождения: %s\nДресирован: %b\n\n"
                 , height, weight, colorEyes, name, breed, vaccinations, dateOfBirth, training);
     }
 

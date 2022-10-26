@@ -3,12 +3,12 @@ package Classes.HomeAnimals;
 import Classes.Animals;
 
 public class FeaturesHomeAnimals extends Animals {
-    String name;
-    String breed;
-    public String vaccinations;
-    String dateOfBirth;
+    public String name;
+    public String breed;
+    public boolean vaccinations;
+    public String dateOfBirth;
 
-    public FeaturesHomeAnimals(int height, int weight, String colorEyes, String name, String breed, String vaccinations, String dateOfBirth) {
+    public FeaturesHomeAnimals(int height, double weight, String colorEyes, String name, String breed, boolean vaccinations, String dateOfBirth) {
         super(height, weight, colorEyes);
         this.name = name;
         this.breed = breed;

@@ -1,21 +1,21 @@
 package Classes.WildAnimals;
 
 public class Wolf extends FeaturesWildAnimals{
-    String lieder;
+    boolean lieder;
 
-    public Wolf(int height, int weight, String colorEyes, String habitat, String dateOfLocation, String lider) {
+    public Wolf(int height, double weight, String colorEyes, String habitat, String dateOfLocation, boolean lieder) {
         super(height, weight, colorEyes, habitat, dateOfLocation);
-        this.lieder = lider;
+        this.lieder = lieder;
     }
 
-    public String getLieder() {
+    public boolean getLieder() {
         return lieder;
     }
 
     @Override
     public void showInfo() {
-        System.out.printf("Рост: %d\nВес: %d\nЦвет глаз: %s\nСреда обитания: %s\nДата нахождения: %s\n\n"
-                , height, weight, colorEyes, habitat, dateOfLocation);
+        System.out.printf("Рост: %d\nВес: %f\nЦвет глаз: %s\nСреда обитания: %s\nДата нахождения: %s\nЛидер: %s\n\n"
+                , height, weight, colorEyes, habitat, dateOfLocation, lieder);
     }
 
     @Override
